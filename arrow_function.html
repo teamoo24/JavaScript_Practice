@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>アロー関数</title>
+	<script type="text/javascript">
+		const calcSum = (a,b,c) => {
+			const result = a+b+c;
+			return result
+		}
+
+		const myFunction1 = (a) => {
+			return a+2;
+		}
+
+		const myFunction2 = a => {
+			return a+2;
+		}
+
+		const myFunction3 = a => a+2
+	</script>
+</head>
+<body>
+<h1>(引数)=>{処理内容}</h1>
+<p>関数を定義する方法は、function宣言の他にアロー関数を使う</p>
+<h2>使い方</h2>
+<p>const calcSum = (a,b,c) => {
+</p>
+<p>	const result = a+b+c;</p>
+<p>	return result;</p>
+};
+</p>
+<h2>実行結果</h2>
+<button onclick="alert('実行結果：'+calcSum(1,2,3))">calcSum</button>
+<hr>
+アロー関数は、functionと異なりいくつかの省略記法がある。<br>
+<h1>引数が一つの場合は省略できる。</h1>
+<h2>使い方</h2>
+const myFunction1 = (a) => {
+<br>			return a+2;
+<br>		}
+<br>
+<br>		const myFunction2 = a => {
+<br>			return a+2;
+<br>		}
+<h3>この場合myFunction1、myFunction2は同じ作動をする</h3>
+<h2>実行結果</h2>
+<button onclick="alert('myFunction1：'+myFunction1(1))">myFunction1</button>
+<button onclick="alert('myFunction2：'+myFunction1(1))">myFunction2</button>
+<hr>
+<h1>アロー 関数 内 の 処理 が 1 行 の とき は、{} と return を 省略 でき ます。</h1>
+<h2>使い方</h2>
+const myFunction3 = a => a+2
+<h2>実行結果</h2>
+<button onclick="alert('myFunction3：'+myFunction1(1))">myFunction3</button>
+</body>
+</html>
