@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>関数の初期値</title>
+	<script type="text/javascript">
+		/**
+		*	税込みの値段を返す関数
+		*	@param pricer 価格	
+		*	@param tax 税率
+		*/
+		calcFunction = (price, tax = 0.08) => price + price*tax 
+	</script>
+</head>
+<body>
+<h1>構文</h1>
+<ul>
+	<li>function 関数名(引数1,引数2 = 初期値2,引数3 = 初期値3){}</li>
+	<li>(引数1,引数2 = 初期値2, 引数3 = 初期値3) => {}</li>
+</ul>
+<h1>説明</h1>
+関数の引数では、「値=初期値」とすることで初期値を定義できます。初期値が設定されている引数は省略可能で、省略された場合は初期値が使われます。「デフォルト引数」といいます。
+<h1>サンプル</h1>
+calcFunction = (price, tax = 0.08) => price + price*tax 
+<h1>実行結果</h1>
+<button onclick="alert('result1：'+calcFunction(100))">result1</button>
+<br><button onclick="alert('result2：'+calcFunction(100, 0.1))">result2</button>
+</body>
+</html>
