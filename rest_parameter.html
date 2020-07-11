@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>任意の引数を渡す</title>
+	<script type="text/javascript">
+		/**
+		* 引数の合計値を返す関数
+		* @param prices
+		* @returns {number}
+		*/
+		function calcSum(...prices) {
+			let result = 0;
+			for (const value of prices) {
+				result += value;
+			}
+
+			return result;
+		}
+
+		const result1 = calcSum(10, 20);
+		const result2 = calcSum(5, 10, 15);
+	</script>
+</head>
+<body>
+<h1>構文</h1>
+<ul>
+	<li>function 関数名(...引数){}</li>
+	<li>(...引数) => {}</li>
+	<li>引数[インデックス]</li>
+</ul>
+<h1>説明</h1>
+0個の引数、1個の引数、2個の引数というように、不特定数の引数を受け取る関数を定義するには、「...引数」のように、「...」を記述します。受け取った引数は、引数[0]、引数[1]と、インデックスを指定して使用できます。「残余引数（restparameters）」といいます。
+<h1>サンプル</h1>
+function calcSum(...prices) {
+<br>			let result = 0;
+<br>			for (const value of prices) {
+<br>				result += value;
+<br>			}
+<br>
+<br>			return result;
+<br>		}
+<br>
+<br>		const result1 = calcSum(10, 20);
+<br>		const result2 = calcSum(5, 10, 15);
+<h1>実行結果</h1>
+<button onclick="alert('result1：' + result1)">result1</button>
+<br><button onclick="alert('result2：' + result2)">result2</button>
+</body>
+</html>
