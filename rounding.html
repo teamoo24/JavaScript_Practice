@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>四捨五入、切り捨て、切り上げをしたい</title>
+	<script type="text/javascript">
+		round_6_24 = () => Math.round(6.24)
+		floor_6_24 = () => Math.floor(6.24)
+		ceil_6_24 = () => Math.ceil(6.24)
+		trunc_6_24 = () => Math.trunc(6.24)
+		round_7_8 = () => Math.round(7.8)
+		floor_7_8 = () => Math.floor(7.8)
+		ceil_7_8 = () => Math.ceil(7.8)
+		trunc_7_8 = () => Math.trunc(7.8)
+	</script>
+</head>
+<body>
+<h1>構文</h1>
+<ul>
+	<li>Math.round(四捨五入する数字)</li>
+	<li>Math.floor(切り捨てる数字)</li>
+	<li>Math.ceil(切り上げる数字)</li>
+	<li>Math.trunc(整数部分だけを求めてる数字)</li>
+</ul>
+<h1>説明</h1>
+四捨五入や切り捨てにはMath.round()、Math.floor()、Math.ceil()、Math.trunc()メソッドを利用します。
+<h1>サンプル</h1>
+round_6_24 = () => Math.round(6.24)<br>
+		floor_6_24 = () => Math.floor(6.24)<br>
+		ceil_6_24 = () => Math.ceil(6.24)<br>
+		trunc_6_24 = () => Math.trunc(6.24)<br>
+		round_7_8 = () => Math.round(7.8)<br>
+		floor_7_8 = () => Math.floor(7.8)<br>
+		ceil_7_8 = () => Math.ceil(7.8)<br>
+		trunc_7_8 = () => Math.trunc(7.8)<br>
+<h1>実行結果</h1>
+<button onclick="alert(round_6_24())">round_6_24</button><br>
+<button onclick="alert(floor_6_24())">floor_6_24</button><br>
+<button onclick="alert(ceil_6_24())">ceil_6_24</button><br>
+<button onclick="alert(trunc_6_24())">trunc_6_24</button><br>
+<button onclick="alert(round_7_8())">round_7_8</button><br>
+<button onclick="alert(floor_7_8())">floor_7_8</button><br>
+<button onclick="alert(ceil_7_8())">ceil_7_8</button><br>
+<button onclick="alert(trunc_7_8())">trunc_7_8</button><br>
+</body>
+</html>

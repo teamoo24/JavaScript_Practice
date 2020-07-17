@@ -15,6 +15,10 @@
 ## rest_parameter.html
 
 * 関数に任意の数の引数を渡したい
+
+## rounding.html
+
+* 四捨五入
 ``` 
 
 [運営サイト：][https://dripcoke.com/](https://dripcoke.com/)
