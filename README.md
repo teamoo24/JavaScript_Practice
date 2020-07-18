@@ -19,6 +19,10 @@
 ## rounding.html
 
 * 四捨五入
+
+## randowm.html
+
+* ランダムな数を使いたい
 ``` 
 
 [運営サイト：][https://dripcoke.com/](https://dripcoke.com/)
