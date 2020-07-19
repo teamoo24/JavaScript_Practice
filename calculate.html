@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>数学的な計算を行いたい</title>
+	<script type="text/javascript">
+		Math_abs = a => Math.abs(a); //-10の絶対値。10
+		Math_pow = (a,b) => Math.pow(a,b); //2の10乗。1024
+		Math_sign_1 = a => Math.sign(a); // 2が正なので1
+		Math_sign_2 = a => Math.sign(a); // -2が負なので-1
+		Math_sqrt = a => Math.sqrt(a); // 16の平方根。4
+		Math_log = a => Math.log(a); // eの自然対数。1
+	</script>
+</head>
+<body>
+<h1>説明</h1>
+Mathオブジェクトには、高機能なグラフやアニメーション表現を行う際に使える数学的な計算メソッドが用意されています。
+<h1>サンプル</h1>
+	<button onclick="alert(Math_abs(-10))">Math.abs(-10)</button>
+	<button onclick="alert(Math_pow(2,10))">Math_pow(2,10)</button>
+	<button onclick="alert(Math_sign_1(2))">Math_sign_1(2)</button>
+	<button onclick="alert(Math_sign_2(-2))">Math_sign_2(-2)</button>
+	<button onclick="alert(Math_sqrt(16))">Math_sqrt(16)</button>
+	<button onclick="alert(Math_log(Math.E))">(Math_log(Math.E)</button>
+</body>
+</html>

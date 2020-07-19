@@ -23,6 +23,10 @@
 ## randowm.html
 
 * ランダムな数を使いたい
+
+## calculate.html
+
+* 数学的な計算を行いたい
 ``` 
 
 [運営サイト：][https://dripcoke.com/](https://dripcoke.com/)
