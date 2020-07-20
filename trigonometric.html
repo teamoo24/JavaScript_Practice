@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title></title>
+	<script type="text/javascript">
+		Math_PI = () => Math.PI;//円周率。3.141592653589793
+		Math_cos = () => Math.cos((90*Math.PI)/180);//cos90度。6.123233995736766e-17※
+		Math_sin = () => Math.sin((90*Math.PI)/180);//sin90度。1
+		Math_tan = () => Math.tan((45*Math.PI)/180);//tan45度。0.9999999999999999※
+		Math_acos = () => Math.acos(1);//アークコサイン1。0
+		Math_atan2 = () => (Math.atan2(1,1)*180)/Math.PI;//(1,1)の座標がなす角度。45（度）。
+
+		window.onload = function () {
+			// 角度
+			let degree = 0;
+
+			// ループを開始
+			loop();
+
+			/**
+			* 画面更新毎に実行される関数
+			*/
+			function loop() {
+
+				const character = document.querySelector('.character')
+				// 回転させたい角度をラジアンで求める
+				const rotation = (degree * Math.PI)/180;
+				// 回転角から位置を求める
+				const targetX = window.innerWidth/2 + 100*Math.cos(rotation) - 50;
+				const targetY = window.innerHeight/2 + 100*Math.sin(rotation) - 50;
+
+				// characterの位置として反映する
+				character.style.left = `${targetX}px`;
+				character.style.top = `${targetY}px`
+
+				//角度を１度増やす
+				degree += 1;
+
+				// 次の画面更新タイミングでloopを実行する
+				window.requestAnimationFrame(loop)
+			}
+
+			
+		}
+	</script>
+	<style type="text/css">
+		.character {
+			background-image: url('dz_4.png'); 
+			position: absolute;
+			width: 124px;
+			height: 124px
+		}
+	</style>
+</head>
+<body>
+<h1>説明</h1>
+サイン、コサイン、タンジェントなど、三角関数を使うためのメソッドです。
+<h1>サンプル</h1>
+<button onclick="alert(Math_PI())">Math_PI</button>
+<button onclick="alert(Math_cos())">Math_cos(90度)</button>
+<button onclick="alert(Math_sin())">Math_sin(90度)</button>
+<button onclick="alert(Math_tan())">Math_tan(45度)</button>
+<button onclick="alert(Math_acos())">Math_acos(アークコサイン1)</button>
+<button onclick="alert(Math_atan2())">Math_atan2((1,1)の座標)</button>
+<br><br>
+Math.cos()やMath.acos()に渡す数値の単位はラジアンです。円周の長さはπで表されるので、度数との変換式は次のようになります。三角関数を使うときは度数をラジアンで変換して使う方がわかりやすいでしょう。
+<br>
+<div style="background-color: aqua; font-weight: bold;">
+	<h3>ラジアン=(度*Math.PI)/180;</h3>
+</div>
+<div class="character"></div>
+</body>
+</html>

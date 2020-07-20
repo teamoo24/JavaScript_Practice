@@ -27,6 +27,10 @@
 ## calculate.html
 
 * 数学的な計算を行いたい
+
+## trigonometric.html
+
+* 三角関数
 ``` 
 
 [運営サイト：][https://dripcoke.com/](https://dripcoke.com/)
